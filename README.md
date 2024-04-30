@@ -17,7 +17,6 @@ This repository contains the source code for my personal website. It showcases m
 ## Features
 
 - **Portfolio:** View my projects and their details.
-- **Blog:** Read my latest blog posts.
 - **Contact:** Send me a message and let's connect!
 
 ## Usage

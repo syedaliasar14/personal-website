@@ -8,13 +8,13 @@
   --background-end-color: #D6D6D6;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-color: #FFFFFF;
     --background-start-color: #000000;
     --background-end-color: #03231b;
   }
-}
+} */
 
 body {
   color: var(--foreground-color);
@@ -24,10 +24,15 @@ body {
       var(--background-end-color)
     )
     var(--background-start-color);
+  font-family: 'Courier New';
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .bg-gray-fav {
+    --tw-bg-opacity: 1;
+    background-color: rgba(87, 87, 87, var(--tw-bg-opacity));
   }
 }

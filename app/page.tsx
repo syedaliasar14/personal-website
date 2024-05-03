@@ -7,18 +7,18 @@ export default function HomePage() {
   ));
 
   return (
-    <main className="flex flex-col w-screen gap-4">
-      <div className="flex flex-row">
-        <div className="flex w-full">
+    <main className="flex flex-col">
+      <div className="flex flex-row min-w-500">
+        <div className="relative overflow-hidden object-cover">
           <Image
-            className="hover:opacity-50 transition-opacity duration-300"
+            className="hover:opacity-50 transition-opacity duration-300 object-contain"
             src={"/me.JPG"}
             alt="Me"
             width={500}
             height={500}
           />
         </div>
-        <div className="flex flex-col pt-16 mx-8">
+        <div className="flex flex-col pt-16 mx-8 max-w-3xl">
           <div className="flex tracking-widest text-6xl uppercase inline-block justify-center">{letters}</div>
           <div className="flex tracking-widest text-center text-xl pt-16">Innovative Agile Software Engineer with a proven track record of delivering robust solutions for diverse projects, specializing in front-end development and integration. Skilled in leveraging React & Next.js to create intuitive user interfaces. Excels in cross-functional collaboration and problem-solving to drive project success.</div>
         </div>

@@ -24,4 +24,4 @@ This repository contains the source code for my personal website. It showcases m
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/syedaliasar14/PersonalWebsite.git
+   git clone https://github.com/syedaliasar14/personal-website.git

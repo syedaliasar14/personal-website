@@ -16,18 +16,19 @@ export default function HomePage() {
     { key: 'css', url: '/skill_icons/css.png' },
     { key: 'python', url: '/skill_icons/python.webp' },
     { key: 'gosu', url: '/skill_icons/gosu.png' },
+    { key: 'guidewire', url: '' },
     { key: 'tailwind css', url: '/skill_icons/tailwind.svg' },
     { key: 'sql', url: '/skill_icons/sql.png' },
     { key: 'c/c++', url: '/skill_icons/c++.png' },
     { key: 'java', url: '/skill_icons/java.png' },
     { key: 'php', url: '/skill_icons/php.png' },
-    { key: 'lua', url: '/skill_icons/lua.png' },
     { key: 'REST/SOAP', url: '' },
     { key: 'oracle', url: '' },
     { key: 'aws', url: '' },
     { key: 'git', url: '' },
     { key: 'figma', url: '' },
     { key: 'tealium', url: '' },
+    { key: 'lua', url: '/skill_icons/lua.png' },
   ];
 
   useEffect(() => {

@@ -35,4 +35,8 @@ body {
     --tw-bg-opacity: 1;
     background-color: rgba(87, 87, 87, var(--tw-bg-opacity));
   }
+  .bg-beige-fav {
+    --tw-bg-opacity: 1;
+    background-color: rgba(130, 128, 126, var(--tw-bg-opacity));
+  }
 }

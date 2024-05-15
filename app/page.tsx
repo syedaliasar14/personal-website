@@ -36,19 +36,20 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col">
-      <div className="flex flex-col sm:flex-row min-w-500 justify-around">
-        <div className={`relative flex justify-center overflow-hidden object-cover mx-2 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 h-[400px] w-[400px] inset-x-0 mx-auto`}>
+      <div className="flex flex-col sm:flex-row justify-center mx-auto mt-0 sm:mt-8 max-w-full">
+        <div className={`relative flex justify-center overflow-hidden object-cover w-full sm:mx-auto h-[400px] sm:w-[400px] ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
           <Image
             className="hover:opacity-75 transition-opacity duration-300 object-contain md:h-[500px]"
             src={"/me.JPG"}
             alt="Me"
             fill
+            objectFit='cover'
           />
         </div>
-        <div className={`flex flex-col pt-8 mx-2 ${isVisible ? 'opacity-100 translate-x-10' : 'opacity-0'} transition-opacity transition-transform duration-1000 mx-auto`}>
-          <div className="flex tracking-widest text-6xl uppercase inline-block justify-center text-center">{name}</div>
-          {/* <div className="flex tracking-widest text-center text-xl pt-16">Innovative Agile Software Engineer with a proven track record of delivering robust solutions for diverse projects, specializing in front-end development and integration. Skilled in leveraging React & Next.js to create intuitive user interfaces. Excels in cross-functional collaboration and problem-solving to drive project success.</div> */}
-          <div className="flex tracking-widest justify-center text-center text-xl pt-16">Make your software solutions a reality</div>
+        <div className={`flex flex-col mx-auto sm:mx-8 xl:ml-14 mt-8 justify-center ${isVisible ? 'opacity-100' : 'opacity-0 -translate-x-20'} transition-opacity transition-transform duration-1000`}>
+          <div className="flex tracking-widest text-6xl uppercase justify-center text-center">{name}</div>
+          {/* <div className="flex tracking-widest text-center text-xl pt-14">Innovative Agile Software Engineer with a proven track record of delivering robust solutions for diverse projects, specializing in front-end development and integration. Skilled in leveraging React & Next.js to create intuitive user interfaces. Excels in cross-functional collaboration and problem-solving to drive project success.</div> */}
+          <div className="flex tracking-widest justify-center text-center text-xl pt-8">Make your software solutions a reality</div>
         </div>
       </div>
       <div className="flex flex-col items-center">
@@ -63,7 +64,7 @@ export default function HomePage() {
               width={100}
               height={100}
             /> */
-            <div key={index} className="w-full bg-beige-fav text-white p-2 rounded uppercase text-center hover:-translate-y-1 transition-transform">{icon.key}</div>
+            <div key={index} className="w-full bg-beige-fav text-white p-2 rounded uppercase text-center hover:-translate-y-1 transition-transform cursor-default">{icon.key}</div>
           ))}
         </div>
       </div>

@@ -25,8 +25,8 @@ export default function ContactPage() {
     setMessage('');
   };
   return (
-    <main className="flex flex-col items-center justify-between sm:w-[500px] mx-auto">
-      <h1 className="text-2xl mb-6 uppercase tracking-widest">Contact Me</h1>
+    <main className="flex flex-col sm:w-[500px] mx-auto mt-8">
+      <h1 className="text-2xl mb-6 uppercase tracking-widest text-center">Contact Me</h1>
       <form onSubmit={handleSubmit} className="space-y-4 w-full">
         <div className="flex flex-col">
           <label htmlFor="email" className="mb-2 uppercase">Email:</label>

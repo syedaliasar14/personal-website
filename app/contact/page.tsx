@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import axios from 'axios';
 
 export default function ContactPage() {
   const [email, setEmail] = useState('');
@@ -8,7 +9,7 @@ export default function ContactPage() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (!email || !message) {
       setError('Both fields are required.');
@@ -20,10 +21,20 @@ export default function ContactPage() {
     }
 
     setError('');
-    setSuccess('Your message has been sent!');
-    setEmail('');
-    setMessage('');
+    try {
+      const response = await axios.post('https://lwumd25fhc.execute-api.us-east-1.amazonaws.com/dev', { email, message });
+      if (response.data.success) {
+        setSuccess('Your message has been sent!');
+        setEmail('');
+        setMessage('');
+      } else {
+        setError('Failed to send message.');
+      }
+    } catch (error) {
+      setError('Failed to send message.');
+    }
   };
+
   return (
     <main className="flex flex-col sm:w-[500px] mx-auto mt-8">
       <h1 className="text-2xl mb-6 uppercase tracking-widest text-center">Contact Me</h1>

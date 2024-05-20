@@ -29,6 +29,8 @@ export default function HomePage() {
     { key: 'figma', url: '' },
     { key: 'tealium', url: '' },
     { key: 'lua', url: '/skill_icons/lua.png' },
+    { key: 'photoshop', url: '' },
+    { key: 'illustrator', url: '' },
   ];
 
   useEffect(() => {

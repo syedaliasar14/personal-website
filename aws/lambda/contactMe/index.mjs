@@ -1,0 +1,60 @@
+import AWS from 'aws-sdk';
+
+const ses = new AWS.SES({ region: 'us-east-1' });
+const senderEmail = 'syedali.asar14@gmail.com';
+const recipientEmail = 'syedali.asar14@gmail.com';
+
+export const handler = async (event) => {
+  const { email, message } = JSON.parse(event.body);
+
+  if (!email || !message) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Both fields are required.' }),
+    };
+  }
+
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Email is invalid.' }),
+    };
+  }
+
+  const params = {
+    Source: senderEmail,
+    Destination: {
+      ToAddresses: [recipientEmail],
+    },
+    Message: {
+      Subject: {
+        Data: `syedaliasar.com - Contact Form Submitted by ${email}`,
+        Charset: 'UTF-8',
+      },
+      Body: {
+        Html: {
+          Data: `<p><strong>Message from:</strong> ${email}</p><p>${message}</p>`,
+          Charset: 'UTF-8',
+        },
+        Text: {
+          Data: `Message from: ${email}\n\n${message}`,
+          Charset: 'UTF-8',
+        },
+      },
+    },
+  };
+
+  try {
+    await ses.sendEmail(params).promise();
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: 'Email sent successfully!' }),
+    };
+  } catch (error) {
+    console.error('Error sending email', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed to send email.' }),
+    };
+  }
+};

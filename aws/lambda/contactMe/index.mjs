@@ -6,10 +6,15 @@ const recipientEmail = 'syedali.asar14@gmail.com';
 
 export const handler = async (event) => {
   const { email, message } = JSON.parse(event.body);
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
 
   if (!email || !message) {
     return {
       statusCode: 400,
+      headers: headers,
       body: JSON.stringify({ error: 'Both fields are required.' }),
     };
   }
@@ -17,6 +22,7 @@ export const handler = async (event) => {
   if (!/\S+@\S+\.\S+/.test(email)) {
     return {
       statusCode: 400,
+      headers: headers,
       body: JSON.stringify({ error: 'Email is invalid.' }),
     };
   }
@@ -48,12 +54,14 @@ export const handler = async (event) => {
     await ses.sendEmail(params).promise();
     return {
       statusCode: 200,
+      headers: headers,
       body: JSON.stringify({ success: 'Email sent successfully!' }),
     };
   } catch (error) {
     console.error('Error sending email', error);
     return {
       statusCode: 500,
+      headers: headers,
       body: JSON.stringify({ error: 'Failed to send email.' }),
     };
   }

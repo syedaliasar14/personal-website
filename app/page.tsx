@@ -9,28 +9,24 @@ export default function HomePage() {
   )); */
   const [isVisible, setIsVisible] = useState(false);
   const skills = [
-    { key: 'react/native', url: '/skill_icons/react.png' },
-    { key: 'next.js', url: '/skill_icons/nextjs.svg' },
-    { key: 'javascript', url: '/skill_icons/javascript.png' },
-    { key: 'html', url: '/skill_icons/html.png' },
-    { key: 'css', url: '/skill_icons/css.png' },
-    { key: 'python', url: '/skill_icons/python.webp' },
-    { key: 'gosu', url: '/skill_icons/gosu.png' },
-    { key: 'guidewire', url: '' },
-    { key: 'tailwind css', url: '/skill_icons/tailwind.svg' },
-    { key: 'sql', url: '/skill_icons/sql.png' },
-    { key: 'c/c++', url: '/skill_icons/c++.png' },
-    { key: 'java', url: '/skill_icons/java.png' },
-    { key: 'php', url: '/skill_icons/php.png' },
-    { key: 'REST/SOAP', url: '' },
-    { key: 'oracle', url: '' },
-    { key: 'aws', url: '' },
-    { key: 'git', url: '' },
-    { key: 'figma', url: '' },
-    { key: 'tealium', url: '' },
-    { key: 'lua', url: '/skill_icons/lua.png' },
-    { key: 'photoshop', url: '' },
-    { key: 'illustrator', url: '' },
+    { key: 'javascript', type: 'essential' },
+    { key: 'next.js', type: 'essential' },
+    { key: 'react/native', type: 'essential' },
+    { key: 'python', type: 'essential' },
+    { key: 'aws', type: 'essential' },
+    { key: 'git', type: 'essential' },
+    { key: 'sql', type: 'essential' },
+    { key: 'html', type: 'essential' },
+    { key: 'css', type: 'essential' },
+    { key: 'c/c++', type: 'essential' },
+    { key: 'java', type: 'essential' },
+    { key: 'php', type: 'essential' },
+    { key: 'REST/SOAP', type: 'essential' },
+    { key: 'tailwind css', type: 'essential' },
+    { key: 'guidewire', type: 'specialized' },
+    { key: 'gosu', type: 'specialized' },
+    { key: 'tealium', type: 'specialized' },
+    { key: 'lua', type: 'specialized' },
   ];
 
   useEffect(() => {
@@ -51,23 +47,14 @@ export default function HomePage() {
         </div>
         <div className={`flex flex-col mx-auto sm:mx-8 xl:ml-14 mt-8 justify-center ${isVisible ? 'opacity-100' : 'opacity-0 -translate-x-20'} transition-opacity transition-transform duration-1000`}>
           <div className="flex tracking-widest text-6xl uppercase justify-center text-center">{name}</div>
-          {/* <div className="flex tracking-widest text-center text-xl pt-14">Innovative Agile Software Engineer with a proven track record of delivering robust solutions for diverse projects, specializing in front-end development and integration. Skilled in leveraging React & Next.js to create intuitive user interfaces. Excels in cross-functional collaboration and problem-solving to drive project success.</div> */}
           <div className="flex tracking-widest justify-center text-center text-xl pt-8">Make your software solutions a reality</div>
         </div>
       </div>
       <div className="flex flex-col items-center">
         <span className="uppercase tracking-widest py-14 text-4xl">Skills</span>
         <div className="grid grid-cols-2 gap-5 justify-center items-center sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 sm:gap-10 mx-4">
-          {skills.map((icon, index) => (
-            /* <Image 
-              className="w-[150px]"
-              src={icon.url}
-              key={index}
-              alt={icon.key}
-              width={100}
-              height={100}
-            /> */
-            <div key={index} className="w-full bg-beige-fav text-white p-2 rounded uppercase text-center hover:-translate-y-1 transition-transform cursor-default">{icon.key}</div>
+          {skills.map((skill, index) => (
+            <div key={index} className="w-full bg-beige-fav text-white p-2 rounded uppercase text-center hover:-translate-y-1 transition-transform cursor-default">{skill.key}</div>
           ))}
         </div>
       </div>

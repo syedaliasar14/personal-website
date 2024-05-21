@@ -22,7 +22,7 @@ export default function ContactPage() {
 
     setError('');
     try {
-      const response = await axios.post('https://lwumd25fhc.execute-api.us-east-1.amazonaws.com/dev/contactMe', 
+      const response = await axios.post('https://lwumd25fhc.execute-api.us-east-1.amazonaws.com/default/contactMe', 
         { email, message }, 
         {
           headers: {

@@ -2,10 +2,6 @@
 
 Welcome to my personal website repo!
 
-## Introduction
-
-This repository contains the source code for my personal website. It showcases my portfolio, projects, blog posts, and more.
-
 ## Technologies Used
 
 - React

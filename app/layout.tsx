@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Syed Ali Asar",
-  description: "My personal website",
+  description: "Syed Ali Asar's personal website",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="min-h-screen flex flex-col items-center">
+        <main className="flex flex-col min-h-[calc(100dvh)]">
           <Header/>
           <div className="flex-grow">
             {children}

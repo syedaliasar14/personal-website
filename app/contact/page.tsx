@@ -4,41 +4,42 @@ import { useState } from "react";
 import axios from 'axios';
 
 export default function ContactPage() {
-  const [email, setEmail] = useState('');
+  const [userEmail, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (!email || !message) {
+    if (!userEmail || !message) {
       setError('Both fields are required.');
       return;
     }
-    if (!/\S+@\S+\.\S+/.test(email)) {
+    if (!/\S+@\S+\.\S+/.test(userEmail)) {
       setError('Email is invalid.');
       return;
     }
 
     setError('');
     try {
-      const response = await axios.post('https://lwumd25fhc.execute-api.us-east-1.amazonaws.com/default/contactMe', 
-        { email, message }, 
+      const response = await axios.post('api/contact', 
+        { userEmail, message }, 
         {
           headers: {
             'Content-Type': 'application/json'
           }
         }
       );
-      if (response.data.success) {
+      if (response.status === 200) {
         setSuccess('Your message has been sent!');
         setEmail('');
         setMessage('');
       } else {
-        setError('Failed to send message.');
+        throw new Error('Failed to send message.');
       }
     } catch (error) {
       setError('Failed to send message.');
+      setSuccess('');
     }
   };
 
@@ -49,25 +50,24 @@ export default function ContactPage() {
         <div className="flex flex-col">
           <label htmlFor="email" className="mb-2 uppercase">Email:</label>
           <input
-            type="email"
+            className="p-2 border border-gray-300 rounded text-gray-700"
             id="email"
-            value={email}
+            value={userEmail}
             onChange={(e) => setEmail(e.target.value)}
-            className="p-2 border border-gray-300 rounded"
           />
         </div>
         <div className="flex flex-col">
           <label htmlFor="message" className="mb-2 uppercase">Message:</label>
           <textarea
+            className="p-2 border border-gray-300 rounded h-32 text-gray-700"
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="p-2 border border-gray-300 rounded h-32"
           ></textarea>
         </div>
         {error && <p className="text-red-500">{error}</p>}
         {success && <p className="text-green-500">{success}</p>}
-        <button type="submit" className="w-full bg-beige-fav text-white p-2 rounded uppercase">Send</button>
+        <button type="submit" className="w-full p-2 rounded bg-slate-900 uppercase">Send</button>
       </form>
     </main>
   );

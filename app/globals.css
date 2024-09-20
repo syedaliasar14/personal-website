@@ -10,4 +10,9 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .skill-hover {
+    @apply hover:-translate-y-1 hover:opacity-100 hover:font-bold hover:scale-105
+      transition-all duration-500 ease-in-out;
+  }
 }

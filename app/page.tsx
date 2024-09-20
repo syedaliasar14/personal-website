@@ -13,10 +13,9 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col">
-      <div className="flex flex-col sm:flex-row justify-center mx-auto mt-0 sm:mt-8 max-w-full">
-        <div className={`relative flex justify-center rounded-full overflow-hidden object-cover w-full sm:mx-auto h-[300px] sm:w-[300px] ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+      <div className="flex flex-col sm:flex-row justify-center mx-auto mt-0 md:mt-8 max-w-full">
+        <div className={`relative flex justify-center rounded-full overflow-hidden object-cover mx-auto h-[300px] w-[300px] ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
           <Image
-            className="hover:opacity-75 transition-opacity duration-300 object-contain md:h-[500px]"
             src={"/me.JPG"}
             alt="Me"
             fill

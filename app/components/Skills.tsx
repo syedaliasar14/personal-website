@@ -1,36 +1,33 @@
 export default function Skills() {
   return (
-    <div className="flex flex-col items-center p-8">
-      <div className="grid grid-cols-2 gap-5 justify-center items-center md:grid-cols-5">
-        {skills.map((skill, index) => (
-          <div key={index} 
-            className={`w-full bg-beige-fav text-white p-2 rounded uppercase text-center opacity-80 cursor-default
-              hover:-translate-y-1 hover:opacity-100 transition-all duration-500 ease-in-out `}
-          >
-            {skill}
-          </div>
-        ))}
+    <section className="flex flex-col w-full items-center gap-8 mt-10 text-center text-lg">
+      <div className="flex flex-col max-w-[500px] items-center justify-center p-4 gap-8 cursor-default">
+        <div className="flex flex-row w-full justify-around gap-4">
+          <span className="skill-hover">Javascript</span>
+          <span className="skill-hover">Next.js</span>
+          <span className="skill-hover">React/Native</span>
+          <span className="skill-hover">Python</span>
+        </div>
+        <div className="flex flex-row w-full justify-around gap-4">
+          <span className="skill-hover">AWS</span>
+          <span className="skill-hover">Git</span>
+          <span className="skill-hover">SQL</span>
+          <span className="skill-hover">HTML</span>
+          <span className="skill-hover">CSS</span>
+          <span className="skill-hover">C/C++</span>
+        </div>
+        <div className="flex flex-row w-full justify-around gap-4">
+          <span className="skill-hover">Java</span>
+          <span className="skill-hover">PHP</span>
+          <span className="skill-hover">REST/SOAP</span>
+          <span className="skill-hover">Tailwind CSS</span>
+        </div>
+        <div className="flex flex-row w-full justify-around gap-4">
+          <span className="skill-hover">Guidewire</span>
+          <span className="skill-hover">Gosu</span>
+          <span className="skill-hover">Lua</span>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
-
-export const skills = [
-  'javascript',
-  'next.js',
-  'react/native',
-  'python',
-  'aws',
-  'git',
-  'sql',
-  'html',
-  'css',
-  'c/c++',
-  'java',
-  'php',
-  'REST/SOAP',
-  'tailwind css',
-  'guidewire',
-  'gosu',
-  'lua',
-];

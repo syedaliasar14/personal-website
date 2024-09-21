@@ -15,6 +15,10 @@ const emailAddress = 'syedali.asar14@gmail.com';
  */
 export async function POST(req: NextRequest) {
   try {
+    if (!process.env.MY_AWS_ACCESS_KEY_ID || !process.env.MY_AWS_SECRET_ACCESS_KEY) {
+      return NextResponse.json({ message: 'Missing credentials' }, { status: 500 });
+    }
+
     const { userEmail, message } = await req.json();
 
     const params = {

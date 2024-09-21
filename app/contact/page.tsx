@@ -44,9 +44,9 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="flex flex-col sm:w-[500px] mx-auto mt-8">
+    <main className="flex flex-col w-full md:w-[32rem] px-8 mt-8">
       <h1 className="text-2xl mb-6 uppercase tracking-widest text-center">Contact Me</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
         <div className="flex flex-col">
           <label htmlFor="email" className="mb-2 uppercase">Email:</label>
           <input

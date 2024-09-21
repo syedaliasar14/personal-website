@@ -1,4 +1,4 @@
-export default function PortfolioPage() {
+export default function ProjectsPage() {
   return (
     <main className="flex flex-col items-center justify-between p-24">
       <div className="uppercase">My Projects</div>

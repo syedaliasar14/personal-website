@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -19,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex flex-col min-h-[calc(100dvh)]">
+        <main className="flex flex-col items-center min-h-[calc(100dvh)]">
           <Header />
-          <div className="flex-grow">
+          <div className="flex justify-center w-full md:w-[48rem] flex-grow">
             {children}
           </div>
           <Footer />

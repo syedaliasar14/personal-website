@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <section className="flex flex-col w-full items-center gap-8 mt-10 text-center text-lg">
+    <section className="flex flex-col w-full items-center gap-8 my-24 text-center text-lg">
       <div className="flex flex-col max-w-[500px] items-center justify-center p-4 gap-8 cursor-default">
         <div className="flex flex-row w-full justify-around gap-4">
           <span className="skill-hover">Javascript</span>

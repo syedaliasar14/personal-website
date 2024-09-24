@@ -38,7 +38,8 @@ export default function ProjectsPage() {
               />
             </div>
 
-            <div className={`md:absolute bottom-0 ${index % 2 === 0 ? 'md:right-0 md:text-right' : 'left-0 text-left'} w-full md:w-[20rem] p-4 bg-slate-900 border border-slate-800 rounded-lg shadow-md shadow-slate-800`}>
+            <div className={`md:absolute bottom-0 ${index % 2 === 0 ? 'md:right-0 md:text-right' : 'left-0 text-left'} w-full md:w-[20rem] p-4 group-hover:scale-105 transition-transform duration-300
+              bg-slate-900 border border-slate-800 rounded-lg shadow-md shadow-slate-800`}>
               <h3 className="text-2xl font-bold mb-2 group-hover:text-green-300 transition-colors duration-300">{project.name}</h3>
               <p className="text-slate-400 mb-4">{project.desc}</p>
               <p className="font-semibold italic p-2">{project.tech}</p>

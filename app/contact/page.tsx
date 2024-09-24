@@ -12,6 +12,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setSuccess('');
     if (!userEmail || !message) {
       setError('Both fields are required.');
       return;
@@ -41,7 +42,6 @@ export default function ContactPage() {
       }
     } catch (error) {
       setError('Failed to send message.');
-      setSuccess('');
     } finally {
       setIsSending(false);
     }
@@ -71,7 +71,7 @@ export default function ContactPage() {
         </div>
         {error && <p className="text-red-500">{error}</p>}
         {success && <p className="text-green-500">{success}</p>}
-        <button type="submit" className="w-full p-2 rounded bg-slate-900">Send</button>
+        <button type="submit" className="w-full p-2 rounded bg-slate-900 hover:bg-slate-700 transition-colors duration-300">Send</button>
         {isSending && <p className="text-gray-500">Sending...</p>}
       </form>
     </main>

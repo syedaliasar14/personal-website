@@ -32,7 +32,7 @@ export default function Skills() {
 
 
   return (
-    <section className="flex flex-col w-full items-center gap-8 my-24 text-center text-lg">
+    <section className="flex flex-col w-full items-center gap-8 my-24 px-8 text-center text-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
         {skills.map((skill, index) => (
           <div

@@ -13,6 +13,13 @@ export default function ProjectsPage() {
       link: "https://www.my-nimbus.com/",
     },
     {
+      name: "FinExPro", 
+      desc: "An AI bank examination tool, pulling real-time bank data and analyzing it using AI.",
+      img: "/projects/finexpro.png",
+      tech: "Next.js, OpenAI, Typescript",
+      link: "https://finexpro.vercel.app/",
+    },
+    {
       name: "Sokaina Asar Portfolio Website",
       desc: "My sister's architecture and studio art portfolio website.",
       img: "/projects/sokainawebsite.png",

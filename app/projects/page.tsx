@@ -2,30 +2,47 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function ProjectsPage() {
   const projects = [
     {
       name: "Nimbus", 
-      desc: "A personal AI therapist, utilizing ChatGPT's API.",
+      desc: "AI therapist for personalized advice, progress tracking, and journaling.",
       img: "/projects/nimbus.png",
-      tech: "Next.js, OpenAI, Typescript",
+      tech: "Next.js, OpenAI, MongoDB, AWS, Typescript",
       link: "https://www.my-nimbus.com/",
     },
     {
       name: "FinExPro", 
-      desc: "An AI bank examination tool, pulling real-time bank data and analyzing it using AI.",
+      desc: "AI Fintech tool for bank examiners.",
       img: "/projects/finexpro.png",
       tech: "Next.js, OpenAI, Typescript",
       link: "https://finexpro.vercel.app/",
     },
     {
+      name: "Todo App", 
+      desc: "Simple todo list app for creating, updating, and deleting tasks.",
+      img: "/projects/todoapp.png",
+      tech: "Next.js, Express.js, Prisma, MySQL",
+      link: "https://todo-list-frontend-teal.vercel.app/",
+      github: "https://github.com/syedaliasar14/todo-list-frontend",
+    },
+    {
       name: "Sokaina Asar Portfolio Website",
-      desc: "My sister's architecture and studio art portfolio website.",
+      desc: "Architecture and studio art portfolio website.",
       img: "/projects/sokainawebsite.png",
       tech: "Next.js, React, Typescript",
       link: "https://sokainaasar.com/",
-    }
+    },
+    {
+      name: "Monster Jobs",
+      desc: "Hackathon challenge - AI-powered job board for integrating monsters into the real world.",
+      img: "/projects/monsterjobs.png",
+      tech: "Next.js, OpenAI, Typescript",
+      link: "https://monster-jobs-chi.vercel.app/",
+      github: "https://github.com/syedaliasar14/monster-jobs",
+    },
   ]
 
   return (
@@ -50,6 +67,15 @@ export default function ProjectsPage() {
               <h3 className="text-2xl font-bold mb-2 group-hover:text-green-300 transition-colors duration-300">{project.name}</h3>
               <p className="text-slate-400 mb-4">{project.desc}</p>
               <p className="font-semibold italic p-2">{project.tech}</p>
+              {project.github && (
+                <Link href={project.github} target="_blank">
+                  <FontAwesomeIcon 
+                    icon={faGithub} 
+                    size="lg"
+                    className="px-2 text-slate-400 hover:text-green-300 transition-colors duration-300 hover:cursor-pointer"
+                  />
+                </Link>
+              )}
               <Link href={project.link} target="_blank">
                 <FontAwesomeIcon 
                   icon={faArrowUpRightFromSquare} 

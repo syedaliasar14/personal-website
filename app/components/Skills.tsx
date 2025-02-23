@@ -39,11 +39,11 @@ export default function Skills() {
             key={index}
             className="w-full relative hover:scale-105 hover:bg-slate-800 hover:text-green-300 transition-transform duration-200 ease-in-out flex items-center justify-start gap-4 p-4 border border-slate-800 rounded-lg shadow-md shadow-slate-800"
           >
-            {skill.heart && (
+            {/* {skill.heart && (
               <span className="absolute top-2 right-2 z-20">
                 <FontAwesomeIcon icon={faHeart} />
               </span>
-            )}
+            )} */}
             <span className="min-w-16 min-h-16 rounded-lg bg-slate-600 flex items-center justify-center">
               <Image src={skill.src} alt={skill.name} width={48} height={48} />
             </span>

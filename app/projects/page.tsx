@@ -7,25 +7,25 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function ProjectsPage() {
   const projects = [
     {
-      name: "Nimbus", 
+      name: "Nimbus",
       desc: "AI therapist for personalized advice, progress tracking, and journaling.",
       img: "/projects/nimbus.png",
       tech: "Next.js, OpenAI, MongoDB, AWS, Typescript",
       link: "https://www.my-nimbus.com/",
     },
     {
-      name: "FinExPro", 
+      name: "FinExPro",
       desc: "AI Fintech tool for bank examiners.",
       img: "/projects/finexpro.png",
       tech: "Next.js, OpenAI, UBPR Bank API",
       link: "https://finexpro.vercel.app/",
     },
     {
-      name: "Todo App", 
+      name: "Todo App",
       desc: "Simple todo list app for creating, retrieving, updating, and deleting tasks.",
       img: "/projects/todoapp.png",
       tech: "Next.js, Express.js, Prisma, MySQL, Tailwind CSS",
-      link: "https://todo-list-frontend-teal.vercel.app/",
+      //link: "https://todo-list-frontend-teal.vercel.app/",
       github: "https://github.com/syedaliasar14/todo-list-frontend",
     },
     {
@@ -50,13 +50,13 @@ export default function ProjectsPage() {
       <div className="text-4xl my-20 font-bold text-center">My Projects</div>
       <div className="relative flex flex-col w-full gap-12 mt-8 px-4">
         {projects.map((project, index) => (
-          <Link href={project.link} target="_blank" key={project.name} className="relative group flex flex-col w-full items-center">
+          <Link href={project.link || project.github || "#"} target="_blank" key={project.name} className="relative group flex flex-col w-full items-center">
             <div className={`absolute top-0 ${index % 2 === 0 ? 'left-0' : 'right-0'} relative flex justify-center overflow-hidden hidden md:flex w-full md:w-[40rem] min-h-[400px] 
               rounded-lg border border-slate-800 opacity-50 group-hover:opacity-90 transition-opacity duration-300`}>
-              <Image 
+              <Image
                 className="absolute"
                 src={project.img}
-                alt={project.name} 
+                alt={project.name}
                 fill
                 objectFit="cover"
               />
@@ -69,20 +69,22 @@ export default function ProjectsPage() {
               <p className="font-semibold italic p-2">{project.tech}</p>
               {project.github && (
                 <Link href={project.github} target="_blank">
-                  <FontAwesomeIcon 
-                    icon={faGithub} 
+                  <FontAwesomeIcon
+                    icon={faGithub}
                     size="lg"
                     className="px-2 text-slate-400 hover:text-green-300 transition-colors duration-300 hover:cursor-pointer"
                   />
                 </Link>
               )}
-              <Link href={project.link} target="_blank">
-                <FontAwesomeIcon 
-                  icon={faArrowUpRightFromSquare} 
-                  size="lg"
-                  className="px-2 text-slate-400 hover:text-green-300 transition-colors duration-300 hover:cursor-pointer"
-                />
-              </Link>
+              {project.link && (
+                <Link href={project.link} target="_blank">
+                  <FontAwesomeIcon
+                    icon={faArrowUpRightFromSquare}
+                    size="lg"
+                    className="px-2 text-slate-400 hover:text-green-300 transition-colors duration-300 hover:cursor-pointer"
+                  />
+                </Link>
+              )}
             </div>
           </Link>
         ))}

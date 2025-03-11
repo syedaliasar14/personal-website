@@ -7,6 +7,13 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function ProjectsPage() {
   const projects = [
     {
+      name: "Acharii Market",
+      desc: "E-commerce website for ordering homemade Pakistani delicacies.",
+      img: "/projects/acharii.png",
+      tech: "Stripe, Next.js, MongoDB, AWS, Typescript",
+      link: "https://www.achariimarket.com/",
+    },
+    {
       name: "Nimbus",
       desc: "AI therapist for personalized advice, progress tracking, and journaling.",
       img: "/projects/nimbus.png",

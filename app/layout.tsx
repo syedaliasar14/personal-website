@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="flex flex-col items-center min-h-[calc(100dvh)]">
           <Header />
-          <div className="flex justify-center w-full md:w-[48rem] flex-grow">
+          <div className="flex justify-center w-full flex-grow">
             {children}
           </div>
           <Footer />

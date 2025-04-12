@@ -53,7 +53,7 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <main className="flex flex-col w-full items-center p-8">
+    <main className="flex flex-col w-full md:w-[48rem] items-center p-8">
       <div className="text-4xl my-20 font-bold text-center">My Projects</div>
       <div className="relative flex flex-col w-full gap-12 mt-8 px-4">
         {projects.map((project, index) => (

@@ -61,11 +61,10 @@ export default function ProjectsPage() {
             <div className={`absolute top-0 ${index % 2 === 0 ? 'left-0' : 'right-0'} relative flex justify-center overflow-hidden hidden md:flex w-full md:w-[40rem] min-h-[400px] 
               rounded-lg border border-slate-800 opacity-50 group-hover:opacity-90 transition-opacity duration-300`}>
               <Image
-                className="absolute"
+                className="absolute object-cover"
                 src={project.img}
                 alt={project.name}
                 fill
-                objectFit="cover"
               />
             </div>
 

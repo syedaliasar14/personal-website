@@ -15,4 +15,20 @@ body {
     @apply hover:-translate-y-1 hover:opacity-100 hover:font-bold hover:scale-105
       transition-all duration-500 ease-in-out;
   }
+
+  .fade-in {
+    animation: fade-in-animation both;
+    animation-timeline: view(70% 0%);
+  }
+  @keyframes fade-in-animation {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(-10px);
+      filter: blur(5px);
+    } to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      filter: blur(0);
+    }
+  }
 }

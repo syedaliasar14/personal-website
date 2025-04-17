@@ -34,7 +34,7 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="w-full relative hover:scale-105 bg-slate-900 hover:bg-slate-800 hover:text-green-300 transition-transform duration-200 ease-in-out flex items-center justify-start gap-4 p-4 border border-slate-800 rounded-lg shadow-md shadow-slate-800 cursor-default"
+            className="fade-in w-full relative hover:scale-105 bg-slate-900 hover:bg-slate-800 hover:text-green-300 transition-transform duration-200 ease-in-out flex items-center justify-start gap-4 p-4 border border-slate-800 rounded-lg shadow-md shadow-slate-800 cursor-default"
           >
             {/* {skill.heart && (
               <span className="absolute top-2 right-2 z-20">

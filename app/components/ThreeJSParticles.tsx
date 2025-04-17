@@ -1,3 +1,5 @@
+"use client";
+
 import * as THREE from 'three';
 import { useEffect, useRef } from 'react';
 
@@ -57,5 +59,5 @@ export default function ThreeJSParticles() {
     };
   }, []);
 
-  return <div ref={mountRef} className="absolute top-0 left-0 w-full h-full -z-10"></div>;
+  return <div ref={mountRef} className=" fixed top-0 left-0 w-full h-full -z-10"></div>;
 }

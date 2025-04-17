@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import ThreeJSParticles from "./components/ThreeJSParticles";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <main className="flex flex-col items-center min-h-[calc(100dvh)]">
           <Header />
           <div className="flex justify-center w-full flex-grow">
+            <ThreeJSParticles />
             {children}
           </div>
           <Footer />

@@ -18,7 +18,7 @@ export default function HomePage() {
         <div className={`flex justify-center rounded-full overflow-hidden object-cover mx-auto min-h-[250px] min-w-[250px] border-4 border-green-300
           ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
           <Image
-            src={"/me.jpg"}
+            src="/me.jpg"
             alt="Me"
             width={300}
             height={300}

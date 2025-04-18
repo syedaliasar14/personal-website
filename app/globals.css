@@ -6,6 +6,10 @@ body {
   @apply bg-slate-950 text-white;
 }
 
+body::selection {
+  @apply bg-green-300 text-slate-800;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

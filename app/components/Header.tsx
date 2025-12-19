@@ -15,8 +15,8 @@ export default function Header() {
           />
         </Link>
         <div>
-          <Link href="/projects" className="text-xl p-2 mx-2 rounded-lg hover:bg-slate-700 hover:text-green-300 transition-all duration-300">
-            Projects
+          <Link href="/portfolio" className="text-xl p-2 mx-2 rounded-lg hover:bg-slate-700 hover:text-green-300 transition-all duration-300">
+            Portfolio
           </Link>
           <Link href="/contact" className="text-xl p-2 mx-2 rounded-lg hover:bg-slate-700 hover:text-green-300 transition-all duration-300">
             Contact

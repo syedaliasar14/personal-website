@@ -32,7 +32,7 @@ export default function HomePage() {
             Here to help streamline, scale, and succeed with thoughtful and high-quality software solutions.
           </div>
           <div className="flex pt-6 font-medium justify-center md:justify-start items-center">
-            <Link href={'/projects'} className="border-2 rounded-full border-green-300 px-4 py-2 text-green-300 hover:bg-green-300 hover:text-slate-800 transition-colors duration-300">
+            <Link href={'/portfolio'} className="border-2 rounded-full border-green-300 px-4 py-2 text-green-300 hover:bg-green-300 hover:text-slate-800 transition-colors duration-300">
               View Portfolio
             </Link>
             <Link href={'/contact'} className="ml-4 border-2 border-green-300 bg-green-300 rounded-full px-4 py-2 text-slate-800 hover:bg-transparent hover:text-green-300 transition-colors duration-300">

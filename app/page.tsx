@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <main className="flex flex-col w-full items-center justify-center px-4">
       <section className="flex flex-col md:flex-row justify-center items-start md:gap-12 my-24 max-w-full w-full md:max-w-5xl">
-        <div className={`flex rounded-full overflow-hidden object-cover mx-auto min-h-[300px] min-w-[300px] border-4 border-green-300 overflow-hidden relative
+        <div className={`flex rounded-full overflow-hidden object-cover mx-auto min-h-[300px] min-w-[300px] border-2 border-green-300 overflow-hidden relative
           ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
           <Image src="/me.JPG" alt="Syed Ali Asar" className="flex-shrink-0 absolute object-cover" 
             width={500} height={500}

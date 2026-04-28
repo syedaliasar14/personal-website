@@ -1,30 +1,26 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/_header";
+import Footer from "./components/_footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import ThreeJSParticles from "./components/ThreeJSParticles";
+import ParticlesBackground from "./components/particles-bg";
 
-const inter = Montserrat({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Syed Ali Asar",
-  description: "Syed Ali Asar's personal website",
+  title: "Syed Ali Asar | Asar Dev Labs",
+  description: "Web developer for your business. I design and develop custom web experiences that don't just look great, but help you attract users, validate your idea, and grow.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={inter.className}>
         <main className="flex flex-col items-center min-h-[calc(100dvh)]">
           <Header />
           <div className="flex justify-center w-full flex-grow">
-            <ThreeJSParticles />
+            <ParticlesBackground />
             {children}
           </div>
           <Footer />

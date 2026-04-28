@@ -1,7 +1,9 @@
+"use client";
+
 import * as THREE from 'three';
 import { useEffect, useRef } from 'react';
 
-export default function InteractiveParticles() {
+export default function ParticlesBackground() {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,59 +40,24 @@ export default function InteractiveParticles() {
 
     camera.position.z = 5;
 
-    // Mouse interaction
-    const mouse = new THREE.Vector2();
-    const raycaster = new THREE.Raycaster();
-    raycaster.params.Points.threshold = 0.1; // Adjust the threshold for interaction
-
-    const onMouseMove = (event: MouseEvent) => {
-      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-    };
-
-    window.addEventListener('mousemove', onMouseMove);
-
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Update particles based on mouse position
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObject(particles);
-
-      if (intersects.length > 0) {
-        const intersect = intersects[0];
-        const positions = particlesGeometry.attributes.position.array as Float32Array;
-
-        for (let i = 0; i < particleCount; i++) {
-          const dx = positions[i * 3] - intersect.point.x;
-          const dy = positions[i * 3 + 1] - intersect.point.y;
-          const dz = positions[i * 3 + 2] - intersect.point.z;
-          const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
-
-          if (distance < 1) {
-            positions[i * 3] += dx * 0.01;
-            positions[i * 3 + 1] += dy * 0.01;
-            positions[i * 3 + 2] += dz * 0.01;
-          }
-        }
-
-        particlesGeometry.attributes.position.needsUpdate = true;
-      }
-
+      // Rotate particles for a dynamic effect
       particles.rotation.y += 0.001;
+
       renderer.render(scene, camera);
     };
     animate();
 
     // Cleanup on unmount
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
       if (mountRef.current) {
         mountRef.current.removeChild(renderer.domElement);
       }
     };
   }, []);
 
-  return <div ref={mountRef} className="absolute top-0 left-0 w-full h-full -z-10"></div>;
+  return <div ref={mountRef} className=" fixed top-0 left-0 w-full h-full -z-10"></div>;
 }

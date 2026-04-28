@@ -43,14 +43,6 @@ export default function ProjectsPage() {
       tech: "Next.js, OpenAI, MongoDB, AWS, Typescript",
       link: "https://www.my-nimbus.com/",
     },
-    /* {
-      name: "Todo App",
-      desc: "Simple todo list app for creating, retrieving, updating, and deleting tasks.",
-      img: "/projects/todoapp.png",
-      tech: "Next.js, Express.js, Prisma, MySQL, Tailwind CSS",
-      //link: "https://todo-list-frontend-teal.vercel.app/",
-      github: "https://github.com/syedaliasar14/todo-list-frontend",
-    }, */
     {
       name: "Studio Art Portfolio Website",
       desc: "Architecture and studio art portfolio website",
@@ -58,15 +50,7 @@ export default function ProjectsPage() {
       tech: "Next.js, React, Typescript",
       link: "https://sokainaasar.com/",
       github: "https://github.com/syedaliasar14/sokaina-website",
-    },
-    /* {
-      name: "Monster Jobs",
-      desc: "Hackathon challenge - AI-powered job board for integrating monsters into the real world.",
-      img: "/projects/monsterjobs.png",
-      tech: "Next.js, OpenAI, Typescript",
-      link: "https://monster-jobs-chi.vercel.app/",
-      github: "https://github.com/syedaliasar14/monster-jobs",
-    }, */
+    }
   ]
 
   return (

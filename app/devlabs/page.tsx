@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Asar Dev Labs",
@@ -8,7 +9,9 @@ export const metadata = {
 export default function DevLabsPage() {
   return (
     <div className="flex flex-col w-full md:max-w-5xl items-center justify-center px-4">
-      <h2 className="text-4xl font-bold text-center mt-20">
+      <Image src="/devlabs-logo-full-dark.svg" alt="Asar Dev Labs Logo" width={200} height={200} className="mt-12" />
+      
+      <h2 className="text-4xl font-semibold text-center mt-20">
         What do you need?
       </h2>
 
@@ -17,7 +20,7 @@ export default function DevLabsPage() {
           I need a website for my business
         </Link>
         <Link href="/devlabs/startup-mvp" className="btn-outline">
-          I'm building a startup
+          I need an MVP for my startup idea
         </Link>
       </div>
     </div>

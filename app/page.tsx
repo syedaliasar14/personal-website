@@ -17,7 +17,7 @@ export default function HomePage() {
       <section className="flex flex-col md:flex-row justify-center items-start md:gap-12 my-24 max-w-full w-full md:max-w-5xl">
         <div className={`flex rounded-full overflow-hidden object-cover mx-auto min-h-[300px] min-w-[300px] border-2 border-green-300 overflow-hidden relative
           ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
-          <Image src="/me.JPG" alt="Syed Ali Asar" className="flex-shrink-0 absolute object-cover" 
+          <Image src="/me.JPG" alt="Syed Ali Asar" className="flex-shrink-0 absolute object-cover"
             width={500} height={500}
           />
           {/* <div className="absolute inset-0 bg-green-300/75 opacity-0 hover:opacity-100 text-4xl font-bold text-center items-center justify-center flex transition-opacity duration-300">Syed Ali Asar</div> */}
@@ -33,11 +33,15 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 mt-12 justify-start w-max">
-            <Link href={'/devlabs'} className="btn-outline w-max">Work With Me</Link>
-            <Link href={'/portfolio'} className="btn w-max">View Portfolio</Link>
+            <Link href={'/devlabs'} className="btn w-max">Work With Me</Link>
+            <Link href={'/portfolio'} className="btn-outline w-max">View Portfolio</Link>
           </div>
         </div>
       </section>
+
+      <Link href="/devlabs" className="w-full flex items-center justify-center mt-12 opacity-50 hover:opacity-100 transition-opacity duration-300">
+        <Image src="/devlabs-logo-full-dark.svg" alt="Asar Dev Labs Logo" width={200} height={200} />
+      </Link>
     </main>
   );
 }

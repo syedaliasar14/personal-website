@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ParticlesBackground from "./components/particles-bg";
@@ -7,6 +7,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const monserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Syed Ali Asar | Asar Dev Labs",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${monserrat.className}`}>
         <main className="flex flex-col items-center min-h-[calc(100dvh)]">
           <Header />
           <div className="flex justify-center w-full flex-grow">

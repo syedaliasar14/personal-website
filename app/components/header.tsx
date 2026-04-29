@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="flex justify-center w-full bg-slate-800 shadow ">
-      <div className="flex flex-row w-full md:w-[48rem] items-center justify-center p-2">
-        <Link href="/" className="text-xl px-3 scale-75 hover:scale-100 transition-transform duration-300">
-          <Image className="rounded-full" src="/avatar.jpg" alt="Avatar" width={48} height={48} />
+    <header className="flex justify-center w-full bg-slate-900 bg-opacity-75 shadow ">
+      <div className="flex flex-row w-full items-center justify-between px-4 py-4">
+        <Link href="/" className="px-3">
+          <Image src="/devlabs-logo.svg" alt="Asar Dev Labs Logo" width={32} height={32} />
         </Link>
 
         <div>

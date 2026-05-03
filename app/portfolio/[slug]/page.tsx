@@ -60,9 +60,7 @@ export default async function PortfolioItemPage({ params }: PortfolioPageProps) 
 	const { slug } = await params;
 	const project = getProjectBySlug(slug);
 
-	if (!project) {
-		notFound();
-	}
+	if (!project) { notFound(); }
 
 	const images = await getProjectImages(slug);
 
@@ -77,16 +75,14 @@ export default async function PortfolioItemPage({ params }: PortfolioPageProps) 
 							Back to portfolio
 						</Link>
 						<div className="space-y-4">
-							<h1 className="text-4xl font-bold md:text-6xl">{project.name}</h1>
-							<p className="text-lg text-slate-300 md:text-xl">{project.shortDesc}</p>
+							<h1 className="text-5xl font-bold md:text-6xl">{project.name}</h1>
+							<p className="text-lg font-semibold text-slate-300 md:text-xl">{project.shortDesc}</p>
 							<p className="max-w-3xl text-base leading-8 text-slate-200 md:text-lg">{project.fullDesc}</p>
 						</div>
 					</div>
 
-					<Link
-						href={project.link}
-						target="_blank"
-						className="inline-flex items-center justify-center gap-2 rounded-full border border-green-300 bg-green-300 px-6 py-3 text-sm font-medium text-slate-900 transition-colors duration-300 hover:bg-transparent hover:text-green-300"
+					<Link href={project.link} target="_blank"
+						className="inline-flex flex-shrink-0 items-center self-end justify-center gap-2 btn text-sm"
 					>
 						Visit live site
 						<ExternalLink size={16} strokeWidth={1.5} />
@@ -97,7 +93,7 @@ export default async function PortfolioItemPage({ params }: PortfolioPageProps) 
 
 				{project.features && project.features.length > 0 && (
 					<section className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 md:p-8">
-						<h2 className="text-2xl font-semibold">Highlights</h2>
+						<h2 className="text-2xl font-semibold">Features</h2>
 						<div className="mt-5 flex flex-wrap gap-3">
 							{project.features.map((feature) => (
 								<span

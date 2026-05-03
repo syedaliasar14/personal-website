@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     name: "Acharii Market",
     slug: "acharii",
-    shortDesc: "E-commerce website for ordering homemade Pakistani delicacies",
+    shortDesc: "E-commerce website for homemade Pakistani delicacies",
     fullDesc: "Acharii Market is an e-commerce experience designed around homemade Pakistani food, with an emphasis on making small-batch specialty products feel trustworthy, convenient, and easy to order online. The site combines clear product browsing, streamlined cart and checkout flows, practical order management, and payment integration so customers can move from discovery to purchase smoothly while the business has a clean storefront that supports both brand storytelling and day-to-day sales operations.",
     features: ["Product listing", "Shopping cart", "Order management", "Payment integration"],
     img: "/projects/acharii.png",
@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     name: "FinExPro",
     slug: "finexpro",
-    shortDesc: "AI Fintech tool for bank examiners.",
+    shortDesc: "AI Fintech tool for bank examiners",
     fullDesc: "FinExPro is an AI-assisted fintech platform created to support bank examiners with faster analysis, clearer risk visibility, and more efficient compliance workflows. Rather than forcing users to sift through large volumes of financial information manually, the product is positioned to surface meaningful patterns, support structured risk assessment, and help reviewers evaluate regulatory concerns with greater speed and consistency in a tool that feels purpose-built for specialized financial oversight work.",
     features: ["AI-powered analysis", "Risk assessment", "Compliance monitoring"],
     img: "/projects/finexpro.png",
@@ -48,14 +48,14 @@ export const projects: Project[] = [
   {
     name: "Nimbus",
     slug: "nimbus",
-    shortDesc: "AI therapist for personalized advice, progress tracking, and journaling",
+    shortDesc: "AI mental health tool",
     fullDesc: "Nimbus is an AI wellness product focused on giving users a more supportive and structured space for reflection, emotional check-ins, and personal progress tracking. The platform brings together conversational guidance, mood monitoring, journaling tools, and privacy-conscious data handling to create an experience that feels helpful between traditional support moments, with features designed to encourage consistency, self-awareness, and a stronger sense of momentum over time.",
     features: ["AI-powered chat", "Mood tracking", "Journaling", "Data storage and privacy"],
     img: "/projects/nimbus.png",
     link: "https://www.my-nimbus.com/",
   },
   {
-    name: "Studio Art Portfolio Website",
+    name: "Sokaina Asar Portfolio Website",
     slug: "sokaina-asar",
     shortDesc: "Architecture and studio art portfolio website",
     fullDesc: "This studio art and architecture portfolio website is built to showcase visual work in a way that feels clean, immersive, and portfolio-first without losing useful context around each project. It supports a professional presentation of creative practice through organized project pages, strong imagery, and direct contact information, making it easier for visitors to move from appreciating the work itself to understanding the artist's perspective and reaching out for opportunities or collaboration.",

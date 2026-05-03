@@ -9,19 +9,21 @@ export default function Header({addPricingLink = false}: {addPricingLink?: boole
           <Image src="/devlabs-logo.svg" alt="Asar Dev Labs Logo" width={32} height={32} />
         </Link>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-8 uppercase tracking-[0.24em] ">
           {addPricingLink && (
-            <Link href={"#pricing"} className="text-xl hover:text-green-300 transition-all duration-300">
+            <Link href={"#pricing"} className="hover:text-green-300 transition-all duration-300">
               Pricing
             </Link>
           )}
-          <Link href="/portfolio" className="text-xl hover:text-green-300 transition-all duration-300">
+          <Link href="/portfolio" className="hover:text-green-300 transition-all duration-300">
             Portfolio
           </Link>
-          <Link href="/contact" className="text-xl hover:text-green-300 transition-all duration-300">
+          <Link href="/contact" className="hover:text-green-300 transition-all duration-300">
             Contact
           </Link>
         </div>
+
+        <div></div>
       </div>
     </header>
   );

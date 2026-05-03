@@ -3,8 +3,6 @@ import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ParticlesBackground from "./components/particles-bg";
-import Header from "./components/header";
-import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const monserrat = Montserrat({ subsets: ["latin"] });
@@ -18,14 +16,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${inter.className} ${monserrat.className}`}>
-        <main className="flex flex-col items-center min-h-[calc(100dvh)]">
-          <Header />
-          <div className="flex justify-center w-full flex-grow">
-            <ParticlesBackground />
-            {children}
-          </div>
-          <Footer />
-        </main>
+        <div className="flex flex-col items-center min-h-[calc(100dvh)]">
+          <ParticlesBackground />
+          {children}
+        </div>
       </body>
     </html>
   );

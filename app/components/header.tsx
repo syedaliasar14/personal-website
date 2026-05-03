@@ -1,19 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({addPricingLink = false}: {addPricingLink?: boolean}) {
   return (
-    <header className="flex justify-center w-full bg-slate-900 bg-opacity-75 shadow ">
+    <header className="flex justify-center w-full bg-slate-800 shadow ">
       <div className="flex flex-row w-full items-center justify-between px-4 py-4">
         <Link href="/" className="px-3">
           <Image src="/devlabs-logo.svg" alt="Asar Dev Labs Logo" width={32} height={32} />
         </Link>
 
-        <div>
-          <Link href="/portfolio" className="text-xl p-2 mx-2 hover:text-green-300 transition-all duration-300">
+        <div className="flex items-center gap-6">
+          {addPricingLink && (
+            <Link href={"#pricing"} className="text-xl hover:text-green-300 transition-all duration-300">
+              Pricing
+            </Link>
+          )}
+          <Link href="/portfolio" className="text-xl hover:text-green-300 transition-all duration-300">
             Portfolio
           </Link>
-          <Link href="/contact" className="text-xl p-2 mx-2 hover:text-green-300 transition-all duration-300">
+          <Link href="/contact" className="text-xl hover:text-green-300 transition-all duration-300">
             Contact
           </Link>
         </div>

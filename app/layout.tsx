@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import ParticlesBackground from "./components/particles-bg";
 

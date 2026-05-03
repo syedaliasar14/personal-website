@@ -40,3 +40,21 @@ body::selection {
     }
   }
 }
+
+.portfolio-swiper {
+  padding-bottom: 3rem !important;
+}
+
+.portfolio-swiper .swiper-button-next,
+.portfolio-swiper .swiper-button-prev {
+  color: rgb(134 239 172);
+}
+
+.portfolio-swiper .swiper-pagination-bullet {
+  background: rgb(148 163 184);
+  opacity: 1;
+}
+
+.portfolio-swiper .swiper-pagination-bullet-active {
+  background: rgb(134 239 172);
+}

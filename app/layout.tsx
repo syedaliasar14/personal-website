@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import ParticlesBackground from "./components/particles-bg";
+import ParticlesBackground from "../components/particles-bg";
 
 const inter = Inter({ subsets: ["latin"] });
 const monserrat = Montserrat({ subsets: ["latin"] });

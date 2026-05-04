@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import axios from 'axios';
-import Footer from "../components/footer";
-import Header from "../components/header";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
 
 export default function ContactPage() {
   const [userEmail, setEmail] = useState('');

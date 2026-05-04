@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import { ArrowRight, BriefcaseBusiness, Rocket } from "lucide-react";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import ServicesOptions from "../components/services-options";
 
 export default function HomePage() {
-  const name = 'Syed Ali Asar'
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,34 +18,47 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col w-full items-center justify-center px-4 flex-grow">
-        <section className="flex flex-col md:flex-row justify-center items-start md:gap-12 my-24 max-w-full w-full md:max-w-5xl">
-          <div className={`flex rounded-full overflow-hidden object-cover mx-auto min-h-[300px] min-w-[300px] border-2 border-green-300 overflow-hidden relative
-          ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
-            <Image src="/me.JPG" alt="Syed Ali Asar" className="flex-shrink-0 absolute object-cover"
-              width={500} height={500}
-            />
-            {/* <div className="absolute inset-0 bg-green-300/75 opacity-0 hover:opacity-100 text-4xl font-bold text-center items-center justify-center flex transition-opacity duration-300">Syed Ali Asar</div> */}
-          </div>
+      <main className="flex flex-col w-full items-center px-4 pb-24 pt-16 max-w-6xl flex-grow">
+        <section className="relative w-full max-w-6xl my-10">
+          <div className="absolute -left-12 h-48 w-48 rounded-full bg-green-300/30 blur-3xl" />
+          <div className="relative grid items-center gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-14">
+            <div className={`relative mx-auto h-[280px] w-[280px] overflow-hidden rounded-full border border-green-300/60 bg-slate-900 shadow-[0_20px_80px_rgba(16,185,129,0.14)] md:h-[340px] md:w-[340px] ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-700`}>
+              <Image
+                src="/me.JPG"
+                alt="Syed Ali Asar"
+                className="object-cover"
+                fill sizes="(max-width: 768px) 280px, 340px" priority
+              />
+            </div>
 
-          <div className={`flex flex-col mt-8 md:mt-0 justify-center ${isVisible ? 'opacity-100' : 'opacity-0 -translate-x-20'} transition-opacity transition-transform duration-1000`}>
-            {/* <div className="flex text-4xl md:text-6xl font-bold justify-center md:justify-start">{name}</div> */}
-            <h1 className="text-5xl md:text-6xl font-bold">
-              Web developer for your <span className="text-green-500">business</span>
-            </h1>
-            <p className="mt-8 text-2xl">
-              If you're a business owner who needs a high-converting website or a startup founder building your MVP, I design and develop custom web experiences that don't just look great, but help you attract users, validate your idea, and grow.
-            </p>
+            <div className={`flex flex-col justify-center ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} transition-all duration-1000`}>
+              <span className="inline-flex w-fit rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-green-200">
+                Syed Ali Asar
+              </span>
+              <h1 className="mt-6 max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
+                Web developer for your <span className="text-green-400">business</span>
+              </h1>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-2xl md:leading-10">
+                If you're a business owner who needs a high-converting website or a startup founder building your MVP, I design and develop custom web experiences that don't just look great, but help you attract users, validate your idea, and grow.
+              </p>
 
-            <div className="flex flex-col md:flex-row gap-4 mt-12 justify-start w-max">
-              <Link href={'/devlabs'} className="btn w-max">Work With Me</Link>
-              <Link href={'/portfolio'} className="btn-outline w-max">View Portfolio</Link>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Link href="/devlabs" className="btn inline-flex w-fit items-center gap-2">
+                  Explore services
+                  <ArrowRight size={16} strokeWidth={1.75} />
+                </Link>
+                <Link href="/portfolio" className="btn-outline inline-flex w-fit items-center gap-2">
+                  View portfolio
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        <Link href="/devlabs" className="w-full flex items-center justify-center mt-12 opacity-50 hover:opacity-100 transition-opacity duration-300">
-          <Image src="/devlabs-logo-full-dark.svg" alt="Asar Dev Labs Logo" width={200} height={200} />
+        <ServicesOptions />
+
+        <Link href="/devlabs" className="mt-12 inline-flex items-center justify-center p-6 opacity-80 transition-all duration-300 hover:opacity-100">
+          <Image src="/devlabs-logo-full-dark.svg" alt="Asar Dev Labs Logo" width={160} height={48} />
         </Link>
       </main>
       <Footer />

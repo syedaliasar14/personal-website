@@ -10,6 +10,10 @@ body::selection {
   @apply bg-green-300 text-slate-800;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 @layer utilities {
   .btn-outline {
     @apply border rounded-full border-green-300 px-6 py-3 text-green-300 font-medium hover:bg-green-300 hover:text-slate-800 transition-colors duration-300 ease-in-out;
@@ -22,6 +26,10 @@ body::selection {
   .skill-hover {
     @apply hover:-translate-y-1 hover:opacity-100 hover:font-bold hover:scale-105
       transition-all duration-500 ease-in-out;
+  }
+
+  .radial-gradient-bg {
+    @apply bg-[radial-gradient(circle_at_top_left,_rgba(134,239,172,0.18),_transparent_30%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(2,6,23,0.94))];
   }
 
   .fade-in {

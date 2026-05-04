@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import Footer from "../../components/footer";
-import Header from "../../components/header";
-import PortfolioSlider from "@/app/components/portfolio-slider";
+import Footer from "../../../components/footer";
+import Header from "../../../components/header";
+import PortfolioSlider from "@/components/portfolio-slider";
 import { projects } from "../data";
 
 type PortfolioPageProps = {

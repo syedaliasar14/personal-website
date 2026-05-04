@@ -5,7 +5,7 @@ export default function Header({addPricingLink = false}: {addPricingLink?: boole
   return (
     <header className="flex justify-center w-full bg-slate-800 shadow ">
       <div className="flex flex-row w-full items-center justify-between px-4 py-4">
-        <Link href="/" className="px-3">
+        <Link href="/devlabs" className="px-3">
           <Image src="/devlabs-logo.svg" alt="Asar Dev Labs Logo" width={32} height={32} />
         </Link>
 

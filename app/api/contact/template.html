@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Inquiry from {{senderName}}</title>
+  <style>
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .content {
+      color: #271f30;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>New Inquiry from {{senderName}}</h1>
+      <p>{{message}}</p>
+    </div>
+    <div class="footer">
+      <p>Reply to this email to respond to {{senderName}}.</p>
+      <p>You're receiving this email because someone contacted you through Asar Dev Labs website.</p>
+      <p>&copy;
+        <script>document.write(new Date().getFullYear());</script> Asar Dev Labs, All rights reserved.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

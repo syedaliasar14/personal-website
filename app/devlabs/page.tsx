@@ -25,7 +25,7 @@ export default function DevLabsPage() {
                 What Can I Build For You?
               </h1>
               <p className="text-lg leading-8 text-slate-300 md:text-xl">
-                Whether you need a business website that actually converts or a startup MVP that goes beyond just looking good, the work is custom, strategic, and built to help you move forward with confidence.
+                Whether you need a business website to grow your brand or a SaaS product to validate your startup idea, I build custom websites and web applications tailored to your vision, goals, and needs.
               </p>
             </div>
             <Image src={"/devlabs-logo-full-dark.svg"} alt="Asar Dev Labs Logo" width={120} height={120} className="self-center"/>

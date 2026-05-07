@@ -21,11 +21,11 @@ const highlights = [
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-[radial-gradient(circle_at_top_left,_rgba(134,239,172,0.2),_transparent_35%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(2,6,23,0.94))] px-6 py-12 md:px-10 md:py-16">
+    <section className="relative overflow-hidden rounded-[2rem] border border-slate-800 radial-card px-6 py-12 md:px-10 md:py-16">
       <div className="absolute -right-10 top-10 h-48 w-48 rounded-full bg-green-300/10 blur-3xl" />
       <div className="relative grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-end">
         <div className="space-y-6">
-          <span className="inline-flex rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-xs uppercase tracking-[0.28em] text-green-200">
+          <span className="inline-flex text-pill">
             Business Websites
           </span>
           <div className="space-y-4">

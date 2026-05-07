@@ -52,7 +52,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: hsl(123, 60%, 58%);
+  --primary: oklch(79.2% 0.209 151.711);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(27.9% 0.041 260.031);
   --secondary-foreground: oklch(1 0 0);
@@ -136,11 +136,15 @@
   }
 
   .btn-outline {
-    @apply border rounded-full border-primary px-6 py-3 text-primary font-medium hover:bg-primary hover:text-background transition-colors duration-300 ease-in-out;
+    @apply border rounded-full bg-gradient-to-tr from-transparent via-transparent to-transparent border-green-300 px-6 py-3 text-green-300 font-medium hover:bg-gradient-to-tr hover:from-primary hover:via-primary hover:to-green-300 hover:text-background transition-colors duration-300 ease-in-out;
   }
 
   .btn {
-    @apply border border-primary bg-primary rounded-full px-6 py-3 text-background font-medium hover:bg-transparent hover:text-primary transition-colors duration-300 ease-in-out;
+    @apply border border-green-300 bg-gradient-to-tr from-primary via-primary to-green-300 rounded-full px-6 py-3 text-background font-medium hover:from-transparent hover:via-transparent hover:to-transparent hover:text-green-300 transition-colors duration-300 ease-in-out;
+  }
+
+  .text-pill {
+    @apply inline-flex rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-sm uppercase tracking-[0.28em] text-green-200;
   }
 
   .skill-hover {
@@ -149,6 +153,10 @@
 
   .radial-gradient-bg {
     @apply bg-[radial-gradient(circle_at_top_left,_rgba(134,239,172,0.18),_transparent_30%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(2,6,23,0.94))];
+  }
+
+  .radial-card {
+    @apply rounded-[1.75rem] px-6 py-12 md:px-10 md:py-16 border border-slate-800 bg-[radial-gradient(circle_at_top_left,_rgba(134,239,172,0.18),_transparent_30%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(2,6,23,0.94))];
   }
 
   .fade-in {

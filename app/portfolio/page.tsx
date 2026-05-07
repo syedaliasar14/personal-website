@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ChevronDown, ExternalLink } from "lucide-react";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import { projects } from "./data";
@@ -14,27 +14,27 @@ export default function ProjectsPage() {
   const totalFeatures = projects.reduce((count, project) => count + (project.features?.length ?? 0), 0);
 
   return (
-    <div className="flex flex-col w-full items-center justify-center flex-grow bg-black/50">
+    <div className="flex flex-col w-full items-center justify-center flex-grow">
       <Header />
       <main className="flex flex-col w-full max-w-6xl px-4 pb-20 pt-20 flex-grow">
         <section className="relative my-12">
-          <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-[linear-gradient(180deg,rgba(134,239,172,0.14),transparent)] blur-3xl md:block" />
           <div className="relative flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl space-y-5">
-              <span className="inline-flex rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-sm uppercase tracking-[0.24em] text-green-200">
+              <Link href="#projects" className="text-pill flex items-center w-max">
                 Portfolio
-              </span>
+                <ChevronDown className="ml-2 text-green-200" size={16} strokeWidth={1.5} />
+              </Link>
               <div className="space-y-4">
                 <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
                   Delivered for your growth
                 </h1>
                 <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-                  A mix of startup products, business sites, and portfolio builds focused on strong visual direction, clear user flow, and smart lead generation.
+                  A collection of business sites, web applications and SaaS products focused on client engagement, clear user flow, and smart lead generation.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 rounded-[1.5rem] border border-slate-800 bg-slate-950/50 radial-gradient-bg p-4 text-sm text-slate-300 md:min-w-[240px]">
+            <div className="radial-card grid min-w-0 grid-cols-2 gap-3 rounded-[1.5rem] bg-slate-950/50 p-4 text-sm text-slate-300 md:min-w-[240px]">
               <div>
                 <p className="text-3xl font-semibold text-white">{projects.length}+</p>
                 <p className="mt-1">Projects featured</p>
@@ -47,7 +47,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <section className="mt-10 grid w-full gap-8">
+        <section className="my-10 grid w-full gap-24" id="projects">
           {projects.map((project, index) => (
             <article key={project.slug} className="group relative overflow-hidden rounded-lg border border-slate-800 bg-slate-900/75 transition-all duration-300 hover:border-green-300/60 hover:shadow-[0_18px_80px_rgba(16,185,129,0.8)]">
               <div className="grid gap-0">
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
                   </div>
 
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                    <Link href={`/portfolio/${project.slug}`} className="inline-flex items-center justify-center gap-2 rounded-full border border-green-300 bg-green-300 px-5 py-3 text-sm font-medium text-slate-900 transition-colors duration-300 hover:bg-transparent hover:text-green-300">
+                    <Link href={`/portfolio/${project.slug}`} className="inline-flex items-center justify-center gap-2 rounded-full btn text-sm">
                       View project
                       <ArrowRight size={16} strokeWidth={1.75} />
                     </Link>
@@ -98,10 +98,10 @@ export default function ProjectsPage() {
 
         <section className="mt-20 text-center md:px-10">
           <Image src="/devlabs-logo.svg" alt="Asar Dev Labs Logo" width={48} height={48} className="mx-auto mb-3" />
-          <p className="text-sm uppercase tracking-[0.26em] text-green-200">Need something custom?</p>
+          <p className="text-sm uppercase tracking-[0.26em] text-green-200">Like what you see?</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Ready to get started?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300">
-            If you want a business website, startup MVP, or portfolio that feels more deliberate than template work, let's connect.
+            If you want a custom site, web application or SaaS product built and tailored to your vision, let's connect.
           </p>
           <div className="mt-6 flex justify-center">
             <Link href="/contact" className="btn">

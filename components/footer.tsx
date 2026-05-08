@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className='px-4 px-4 md:columns-2 space-y-2 gap-x-12 text-sm uppercase tracking-[0.24em]'>
             <Link href="/devlabs" className="block w-max mx-auto md:mx-0 hover:text-green-300 transition-colors">
-              Dev Labs
+              Home
             </Link>
             <Link href="/devlabs/business-websites" className="block w-max mx-auto md:mx-0 hover:text-green-300 transition-colors">
               Business Websites

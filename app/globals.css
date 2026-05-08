@@ -61,7 +61,7 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
+  --border: oklch(27.9% 0.041 260.031);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.87 0 0);
@@ -156,7 +156,7 @@
   }
 
   .radial-card {
-    @apply rounded-[1.75rem] px-6 py-12 md:px-10 md:py-16 border border-slate-800 bg-[radial-gradient(circle_at_top_left,_rgba(134,239,172,0.18),_transparent_30%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(2,6,23,0.94))];
+    @apply rounded-[1.75rem] px-6 py-12 md:px-10 md:py-12 border border-slate-800 bg-[radial-gradient(circle_at_top_left,_rgba(134,239,172,0.18),_transparent_30%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(2,6,23,0.94))];
   }
 
   .fade-in {

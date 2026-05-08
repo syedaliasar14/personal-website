@@ -38,7 +38,7 @@ export default function HeroSection() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/contact" className="btn inline-flex items-center justify-center gap-2">
-              Get in touch
+              Get started
               <ArrowRight size={16} strokeWidth={1.75} />
             </Link>
             <Link href="#pricing" className="btn-outline inline-flex items-center justify-center gap-2">

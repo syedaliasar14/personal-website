@@ -69,8 +69,8 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
 
         <Controller name="message" control={form.control} render={({ field, fieldState }) => (
           <Field data-invalid={fieldState.invalid}>
-            <FieldLabel htmlFor={field.name} className="uppercase tracking-[0.18em]">Project Details</FieldLabel>
-            <Textarea {...field} id={field.name} aria-invalid={fieldState.invalid} rows={6} placeholder="What do you need help with, and what outcome are you aiming for?" />
+            <FieldLabel htmlFor={field.name} className="uppercase tracking-[0.18em]">What do you need?</FieldLabel>
+            <Textarea {...field} id={field.name} aria-invalid={fieldState.invalid} rows={6} placeholder="Describe your business goal and need (website, web app, SaaS product, etc.)" />
             {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
           </Field>
         )}
@@ -83,12 +83,12 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
         {isSubmitting ? "Sending..." : submitButtonText || "Send Message"}
       </button>
       {submitted && (
-        <p className="mt-4 inline-flex items-center gap-2 text-sm text-green-200">
+        <p className="mt-4 inline-flex items-center gap-2 text-sm text-green-200 text-balance">
           <CheckCircle2 className="h-4 w-4" />
           Message sent successfully. I&apos;ll get back to you soon.
         </p>
       )}
-      {submitError && <p className="mt-4 text-sm text-rose-300">{submitError}</p>}
+      {submitError && <p className="mt-4 text-sm text-rose-300 text-balance">{submitError}</p>}
     </form>
   );
 }

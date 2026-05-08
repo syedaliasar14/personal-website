@@ -16,7 +16,7 @@ export default function ProjectsPage() {
   return (
     <div className="flex flex-col w-full items-center justify-center flex-grow">
       <Header />
-      <main className="flex flex-col w-full max-w-6xl px-4 pb-20 pt-20 flex-grow">
+      <main className="flex flex-col w-full max-w-6xl px-4 py-24 flex-grow">
         <section className="relative my-12">
           <div className="relative flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl space-y-5">

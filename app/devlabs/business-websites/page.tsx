@@ -13,7 +13,7 @@ export default function BusinessWebsitesPage() {
   return (
     <>
       <Header addPricingLink />
-      <main className="flex flex-col w-full max-w-6xl px-4 pb-24 pt-16 flex-grow mx-auto">
+      <main className="flex flex-col w-full max-w-6xl px-4 py-24 flex-grow mx-auto">
         <HeroSection />
         <ProcessSection />
         <PricingSection />

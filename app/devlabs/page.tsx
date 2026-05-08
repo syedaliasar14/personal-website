@@ -14,7 +14,7 @@ export default function DevLabsPage() {
   return (
     <>
       <Header />
-      <main className="flex flex-col w-full max-w-6xl items-center px-4 pb-24 pt-16 flex-grow mx-auto">
+      <main className="flex flex-col w-full max-w-6xl items-center px-4 py-24 flex-grow mx-auto">
         <section className="relative w-full my-10">
           <div className="relative flex md:flex-row flex-col-reverse items-start gap-8">
             <div className="max-w-4xl space-y-4 flex flex-col">

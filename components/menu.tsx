@@ -9,7 +9,7 @@ export default function Menu() {
       <SheetTrigger>
         <TextAlignJustify strokeWidth={1.5} className="hover:text-green-300 transition-colors duration-300" />
       </SheetTrigger>
-      <SheetContent className="bg-foreground flex flex-col items-center">
+      <SheetContent className="bg-foreground flex flex-col items-center border-slate-300">
         <SheetHeader>
           <SheetTitle></SheetTitle>
           <SheetDescription></SheetDescription>

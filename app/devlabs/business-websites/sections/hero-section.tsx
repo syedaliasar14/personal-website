@@ -21,11 +21,11 @@ const highlights = [
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden rounded-[2rem] border border-slate-800 radial-card px-6 py-12 md:px-10 md:py-16">
-      <div className="absolute -right-10 top-10 h-48 w-48 rounded-full bg-green-300/10 blur-3xl" />
-      <div className="relative grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-end">
+    <section className="px-4">
+      <div className="max-w-6xl mx-auto radial-card relative overflow-hidden">
+        <div className="absolute -right-10 top-10 h-48 w-48 rounded-full bg-green-300/10 blur-3xl" />
         <div className="space-y-6">
-          <span className="inline-flex text-pill">
+          <span className="pill-primary">
             Business Websites
           </span>
           <div className="space-y-4">
@@ -46,19 +46,19 @@ export default function HeroSection() {
             </Link>
           </div>
         </div>
+      </div>
 
-        <div className="grid gap-4 rounded-[1.75rem] border border-slate-800 bg-slate-950/60 p-5 md:grid-cols-2 lg:grid-cols-1">
-          {highlights.map(({ title, description, Icon }, index) => (
-            <div
-              key={title}
-              className={`rounded-[1.25rem] border border-slate-800 bg-slate-900/80 p-5 ${index === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}
-            >
-              <Icon className="text-green-300" size={24} strokeWidth={1.5} />
-              <h2 className="mt-4 text-xl font-semibold">{title}</h2>
-              <p className="mt-2 text-sm leading-7 text-slate-300">{description}</p>
-            </div>
-          ))}
-        </div>
+      <div className="max-w-6xl mx-auto grid gap-4 mt-10 md:grid-cols-3">
+        {highlights.map(({ title, description, Icon }, index) => (
+          <div
+            key={title}
+            className={`rounded-[1.25rem] radial-gradient-bg border border-slate-800 hover:border-green-300/70 transition-all duration-300 p-5 ${index === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}
+          >
+            <Icon className="text-green-300" size={24} strokeWidth={1.5} />
+            <h2 className="mt-4 text-xl font-semibold">{title}</h2>
+            <p className="mt-2 text-sm leading-7 text-slate-300">{description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

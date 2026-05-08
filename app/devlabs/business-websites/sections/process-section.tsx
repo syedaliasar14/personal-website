@@ -38,12 +38,14 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section className="mt-16">
-      <div className="max-w-3xl">
-        <p className="text-sm uppercase tracking-[0.28em] text-green-200">The Process</p>
-        <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Here's what to expect</h2>
+    <section className="mt-16 py-24 bg-foreground w-full text-background">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-3xl">
+          <p className="pill-primary font-medium text-green-100 bg-green-600/70">The Process</p>
+          <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Here's what to expect</h2>
+        </div>
+        <ProcessAccordion items={processSteps} />
       </div>
-      <ProcessAccordion items={processSteps} />
     </section>
   );
 }

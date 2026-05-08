@@ -24,10 +24,10 @@ const pricingTiers = [
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="mt-16">
+    <section id="pricing" className="mt-16 py-16">
       <div className="max-w-3xl">
-        <p className="text-sm uppercase tracking-[0.28em] text-green-200">Pricing</p>
-        <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Package options for any stage of your business</h2>
+        <p className="pill-primary">Pricing</p>
+        <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Pricing options for any stage of your business</h2>
       </div>
       <div className="mt-8 grid gap-6 lg:grid-cols-3">
         {pricingTiers.map((tier, index) => (

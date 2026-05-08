@@ -9,7 +9,7 @@ export default function ContactPage() {
       <Header />
       <main className="flex flex-col w-full items-center px-4 py-24 max-w-6xl flex-grow">
         <section className="flex flex-col radial-card items-center max-w-3xl w-full">
-          <span className="inline-flex text-pill mb-10">
+          <span className="inline-flex pill-primary mb-10">
             Contact
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground flex">

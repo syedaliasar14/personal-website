@@ -20,7 +20,7 @@ export default function ProjectsPage() {
         <section className="relative my-12">
           <div className="relative flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl space-y-5">
-              <Link href="#projects" className="text-pill flex items-center w-max">
+              <Link href="#projects" className="pill-primary flex items-center w-max">
                 Portfolio
                 <ChevronDown className="ml-2 text-green-200" size={16} strokeWidth={1.5} />
               </Link>

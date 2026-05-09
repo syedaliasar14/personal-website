@@ -70,7 +70,7 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
         <Controller name="message" control={form.control} render={({ field, fieldState }) => (
           <Field data-invalid={fieldState.invalid}>
             <FieldLabel htmlFor={field.name} className="uppercase tracking-[0.18em]">What do you need?</FieldLabel>
-            <Textarea {...field} id={field.name} aria-invalid={fieldState.invalid} rows={6} placeholder="Describe your business goal and need (website, web app, SaaS product, etc.)" />
+            <Textarea {...field} id={field.name} aria-invalid={fieldState.invalid} rows={6} placeholder="Describe what you need and any specific features." />
             {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
           </Field>
         )}
@@ -78,7 +78,7 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
 
       </FieldGroup>
 
-      <button type="submit" className="mt-8 inline-flex items-center justify-center gap-2 self-start rounded-full border border-green-300 bg-green-300 px-6 py-3 text-sm font-medium uppercase tracking-[0.24em] text-slate-900 transition-colors duration-300 hover:bg-transparent hover:text-green-300 disabled:cursor-not-allowed disabled:opacity-70" disabled={isSubmitting}>
+      <button type="submit" className="mt-8 inline-flex items-center justify-center gap-2 self-start btn disabled:cursor-not-allowed disabled:opacity-70" disabled={isSubmitting}>
         {isSubmitting && <LoaderCircle className="h-4 w-4 animate-spin" />}
         {isSubmitting ? "Sending..." : submitButtonText || "Send Message"}
       </button>

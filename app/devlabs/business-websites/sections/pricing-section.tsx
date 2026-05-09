@@ -1,70 +1,127 @@
 import Link from "next/link";
-import { ArrowRight, Check, CircleDollarSign } from "lucide-react";
+import { ArrowRight, Check, CircleDollarSign, Plus, PlusCircle } from "lucide-react";
 
 const pricingTiers = [
   {
-    name: "Base Website",
+    name: "Business Website",
+    price: "$800",
+    summary: "The essentials you need to establish your online presence and turn visitors into customers.",
+    features: [
+      "Up to 8 pages",
+      "Custom & mobile-friendly design",
+      "Simple contact form",
+      "Editable content (text, images, etc.)",
+      "SEO optimization",
+    ],
+  },
+];
+
+const addOns = [
+  {
+    name: "Portfolio",
+    price: "$200",
+  },
+  {
+    name: "Blog",
+    price: "$200",
+  },
+  {
+    name: "Booking System",
+    price: "$300",
+  },
+  {
+    name: "5 Additional Pages",
+    price: "$200",
+  },
+  {
+    name: "E-commerce Integration",
     price: "$500",
-    summary: "A clean, modern website for businesses that need a credible online presence fast.",
-    features: ["Custom landing page design", "Core business pages", "Mobile-friendly layout", "Contact call-to-action setup"],
   },
   {
-    name: "Business Package",
-    price: "$1200",
-    summary: "Built for businesses that want stronger lead flow, more insight, and more serious conversion support.",
-    features: ["Everything in Base Website", "Advanced lead forms", "Analytics setup", "Conversion-focused page structure", "More tailored page strategy"],
-  },
-  {
-    name: "Add-On",
-    price: "Custom",
-    summary: "Optional upgrades when your business needs functionality beyond a marketing site.",
-    features: ["Payment processor integration", "Booking or inquiry workflows", "Extra pages", "Custom scoped enhancements"],
+    name: "Analytics Setup",
+    price: "$100",
   },
 ];
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="mt-16 py-16">
-      <div className="max-w-3xl">
-        <p className="pill-primary">Pricing</p>
-        <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Pricing options for any stage of your business</h2>
-      </div>
-      <div className="mt-8 grid gap-6 lg:grid-cols-3">
-        {pricingTiers.map((tier, index) => (
-          <article
-            key={tier.name}
-            className={`rounded-[1.75rem] border p-6 ${index === 1 ? "border-green-300 bg-[linear-gradient(180deg,rgba(134,239,172,0.12),rgba(15,23,42,0.9))]" : "border-slate-800 bg-slate-900/70"}`}
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h3 className="text-2xl font-semibold">{tier.name}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{tier.summary}</p>
+    <>
+      <section id="pricing" className="py-20 bg-foreground w-full text-background">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-3xl">
+            <p className="pill-solid">Pricing</p>
+            <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl text-balance">Pricing options for any stage of your business</h2>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {pricingTiers.map((tier, index) => (
+              <article key={tier.name} className={`relative rounded-[1.75rem] border p-6 ${index === 1 ? "border-green-300" : "border-slate-200"}`}>
+                <CircleDollarSign className="absolute top-6 right-6 text-green-500 flex-shrink-0" size={24} strokeWidth={1.5} />
+
+                <p className="text-xs">Starting at</p>
+                <p className="mt-2 text-5xl font-bold">{tier.price}</p>
+                <h3 className="mt-2 text-2xl font-semibold">{tier.name}</h3>
+                <p className="mt-3 text-sm leading-7">{tier.summary}</p>
+
+                <div className="mt-6 space-y-3 text-sm">
+                  {tier.features.map((feature) => (
+                    <p key={feature} className="flex items-start gap-3 leading-7">
+                      <Check className="mt-1 shrink-0 text-green-500" size={16} strokeWidth={2} />
+                      <span>{feature}</span>
+                    </p>
+                  ))}
+                </div>
+
+                <Link href="/contact" className="btn mt-6 text-sm w-full inline-flex items-center justify-center gap-2">
+                  Get started
+                  <ArrowRight size={16} strokeWidth={1.75} />
+                </Link>
+              </article>
+            ))}
+
+            <article className={`flex flex-col relative rounded-[1.75rem] p-6 md:col-span-2`}>
+              <h3 className="mt-2 text-3xl font-semibold">Add-on Features</h3>
+              <p className="mt-2 text-sm leading-7">
+                Every business needs something different. Make sure to mention any specific features or requirements you have when reaching out.
+              </p>
+
+              <div className="mt-6 grid gap-3 grid-cols-1 sm:grid-cols-2">
+                {addOns.map((addOn) => (
+                  <div key={addOn.name} className="flex items-center justify-between gap-3 px-3 py-2 border border-slate-200 rounded-full transition-colors">
+                    <div className="flex items-center gap-2">
+                      <PlusCircle className="shrink-0 text-green-500" size={18} strokeWidth={2} />
+                      <span className="font-medium text-slate-900">{addOn.name}</span>
+                    </div>
+                    <span className="font-semibold">{addOn.price}</span>
+                  </div>
+                ))}
               </div>
-              <CircleDollarSign className="text-green-300" size={24} strokeWidth={1.5} />
-            </div>
-            <p className="mt-6 text-4xl font-bold">{tier.price}</p>
-            <div className="mt-6 space-y-3 text-sm text-slate-200">
-              {tier.features.map((feature) => (
-                <p key={feature} className="flex items-start gap-3 leading-7">
-                  <Check className="mt-1 shrink-0 text-green-300" size={16} strokeWidth={2} />
-                  <span>{feature}</span>
-                </p>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-      <div className="mt-8 rounded-[1.75rem] border border-slate-800 bg-slate-900/70 p-6 md:p-8">
-        <p className="text-base leading-8 text-slate-300">
-          Need something between these options or want a custom quote based on your exact goals? Reach out and I can scope the right setup for your business.
-        </p>
-        <div className="mt-5">
-          <Link href="/contact" className="btn inline-flex items-center gap-2">
-            Talk about your website
-            <ArrowRight size={16} strokeWidth={1.75} />
-          </Link>
+
+              <p className="text-muted-foreground text-xs mt-6">
+                Don't see what you're looking for? <Link href="/contact" className="text-green-500 underline">Let me know</Link> and we'll see what we can do.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="pt-12 w-full px-4 flex items-center justify-center">
+        <div className="mt-8 max-w-3xl p-6 md:p-8">
+          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Looking for something else?</h1>
+          <p className="opacity-80 mt-4 leading-7">
+            Need a more custom solution, or want to talk through what features would be best for your business? Reach out and we can discuss something that works for you.
+          </p>
+          <div className="mt-5">
+            <Link href="/contact" className="btn inline-flex items-center gap-2">
+              Let's discuss
+              <ArrowRight size={16} strokeWidth={1.75} />
+            </Link>
+            <Link href="devlabs" className="btn-outline inline-flex items-center gap-2 ml-4">
+              Other services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+    </>
   );
 }

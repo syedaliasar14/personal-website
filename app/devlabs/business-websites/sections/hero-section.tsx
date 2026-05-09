@@ -1,20 +1,20 @@
 import Link from "next/link";
-import { ArrowRight, Globe, Megaphone, MousePointerClick } from "lucide-react";
+import { ArrowRight, Globe, MousePointerClick, PencilLine } from "lucide-react";
 
 const highlights = [
   {
-    title: "Conversion-first structure",
-    description: "Clear offers, stronger calls to action, and page layouts that help visitors know what to do next.",
+    title: "Professional design",
+    description: "A site that looks polished, modern, and aligns with your brand identity to build trust.",
     Icon: MousePointerClick,
   },
   {
-    title: "Brand clarity",
-    description: "A site that makes your business look established, intentional, and much easier to trust.",
-    Icon: Megaphone,
+    title: "Easy content management",
+    description: "Easily manage content like portfolios, services, or about info anytime without code.",
+    Icon: PencilLine,
   },
   {
-    title: "Built for ownership",
-    description: "You get a real handoff process, launch support, and a site you can confidently keep using after delivery.",
+    title: "Strategic SEO",
+    description: "Rank higher on search engines so customers can actually find you.",
     Icon: Globe,
   },
 ];
@@ -33,7 +33,7 @@ export default function HeroSection() {
               Get more customers with a website that actually converts.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-              I build business websites that do more than sit online looking decent. The goal is to make your offer clearer, build trust faster, and guide visitors toward contacting you, booking you, or buying from you.
+              I build business websites that work for you. They help customers find you, quickly understand what you offer, and guide them to take action.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -50,10 +50,7 @@ export default function HeroSection() {
 
       <div className="max-w-6xl mx-auto grid gap-4 mt-10 md:grid-cols-3">
         {highlights.map(({ title, description, Icon }, index) => (
-          <div
-            key={title}
-            className={`rounded-[1.25rem] radial-gradient-bg border border-slate-800 hover:border-green-300/70 transition-all duration-300 p-5 ${index === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}
-          >
+          <div key={title} className={`rounded-[1.25rem] radial-gradient-bg border border-slate-800 hover:border-green-300/70 transition-all duration-300 p-5 hover:cursor-default`}>
             <Icon className="text-green-300" size={24} strokeWidth={1.5} />
             <h2 className="mt-4 text-xl font-semibold">{title}</h2>
             <p className="mt-2 text-sm leading-7 text-slate-300">{description}</p>

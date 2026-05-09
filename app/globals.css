@@ -144,11 +144,11 @@
   }
 
   .pill-primary {
-    @apply inline-flex rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-sm uppercase tracking-[0.28em] text-green-200;
+    @apply inline-flex rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-green-200;
   }
 
-  .pill-secondary {
-    @apply inline-flex rounded-full border border-slate-800/60 bg-slate-800/40 px-4 py-2 text-sm uppercase tracking-[0.28em] text-slate-800;
+  .pill-solid {
+    @apply inline-flex rounded-full border border-green-300/40 bg-green-600/70 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-green-100;
   }
 
   .skill-hover {

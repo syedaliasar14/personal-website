@@ -31,7 +31,7 @@ const processSteps = [
   },
   {
     title: "Revisions and Maintenance",
-    description: "If small bugs or minor improvements show up after launch, I fix them at no cost. Larger redesigns or feature additions are scoped separately, and ongoing maintenance can be handled through a monthly plan.",
+    description: "If small bugs or minor improvements show up after launch, I fix them at no cost. Larger redesigns or feature additions are charged separately. If you need ongoing maintenance, we can discuss a monthly plan.",
     icon: Wrench,
   },
 ];
@@ -41,7 +41,7 @@ export default function ProcessSection() {
     <section className="mt-16 py-24 bg-foreground w-full text-background">
       <div className="max-w-6xl mx-auto px-4">
         <div className="max-w-3xl">
-          <p className="pill-primary font-medium text-green-100 bg-green-600/70">The Process</p>
+          <p className="pill-solid">The Process</p>
           <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Here's what to expect</h2>
         </div>
         <ProcessAccordion items={processSteps} />

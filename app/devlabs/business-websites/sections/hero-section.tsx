@@ -8,7 +8,7 @@ const highlights = [
     Icon: MousePointerClick,
   },
   {
-    title: "Easy content management",
+    title: "Easy editing",
     description: "Easily manage content like portfolios, services, or about info anytime without code.",
     Icon: PencilLine,
   },

@@ -2,10 +2,16 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import ContactForm from "./contact-form";
 import { Send } from "lucide-react";
+import Script from "next/script";
 
 export default function ContactPage() {
   return (
     <>
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+      ></Script>
       <Header />
       <main className="flex flex-col w-full items-center px-4 py-24 max-w-6xl flex-grow">
         <section className="flex flex-col radial-card items-center max-w-3xl w-full">

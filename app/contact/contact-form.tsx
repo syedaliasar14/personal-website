@@ -9,6 +9,9 @@ import { Field, FieldGroup, FieldError, FieldLabel } from "@/components/ui/field
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2, LoaderCircle } from "lucide-react";
+import { config } from '@/config';
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAADMLIBTNbe_KoiU6";
 
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -33,13 +36,22 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
     setIsSubmitting(true);
     setSubmitted(false);
     setSubmitError(null);
+
+    const token = (document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement | null)?.value;
+
+    if (!token) {
+      setSubmitError("Please complete the verification.");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      await axios.post("/api/contact", data);
+      await axios.post("/api/contact", { ...data, token });
       form.reset();
       setSubmitted(true);
     } catch (error) {
       console.error("Error submitting contact form:", error);
-      setSubmitError("The message could not be sent. Please try again or email me directly.");
+      setSubmitError(`The message could not be sent. Please try again or email me directly at ${config.email}.`);
     } finally {
       setIsSubmitting(false);
     }
@@ -75,6 +87,8 @@ export default function ContactForm({ submitButtonText }: { submitButtonText?: s
           </Field>
         )}
         />
+
+        <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="dark" />
 
       </FieldGroup>
 

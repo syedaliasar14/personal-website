@@ -33,7 +33,7 @@ export default function HeroSection() {
               Get more customers with a website that actually converts.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-              I build business websites that work for you. They help customers find you, quickly understand what you offer, and guide them to take action.
+              I build websites that work for you. They help customers find you, quickly understand what you offer, and guide them to take action.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

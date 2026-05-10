@@ -136,11 +136,11 @@
   }
 
   .btn-outline {
-    @apply border rounded-full bg-gradient-to-tr from-transparent via-transparent to-transparent border-green-300 px-6 py-3 text-green-300 font-medium hover:bg-gradient-to-tr hover:from-primary hover:via-primary hover:to-green-300 hover:text-background transition-colors duration-300 ease-in-out;
+    @apply border rounded-full bg-transparent border-green-300 px-6 py-3 text-green-300 font-medium hover:bg-primary hover:to-green-300 hover:text-background transition-colors duration-300 ease-in-out;
   }
 
   .btn {
-    @apply border border-green-300 bg-gradient-to-tr from-primary via-primary to-green-300 rounded-full px-6 py-3 text-background font-medium hover:from-transparent hover:via-transparent hover:to-transparent hover:text-green-300 transition-colors duration-300 ease-in-out;
+    @apply border border-green-300 bg-primary rounded-full px-6 py-3 text-background font-medium hover:bg-transparent hover:text-green-300 transition-colors duration-300 ease-in-out;
   }
 
   .pill-primary {

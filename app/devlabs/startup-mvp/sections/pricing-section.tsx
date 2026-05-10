@@ -15,7 +15,7 @@ export default function PricingSection() {
             Let's discuss pricing
             <ArrowRight size={16} strokeWidth={1.75} />
           </Link>
-          <Link href="#features" className="btn-outline text-green-400 hover:text-background">
+          <Link href="#features" className="btn-outline text-green-400 hover:text-background inline-flex items-center justify-center gap-2">
             See features
           </Link>
         </div>

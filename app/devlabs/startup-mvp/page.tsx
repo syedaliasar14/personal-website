@@ -1,6 +1,5 @@
 import Footer from "../../../components/footer";
 import Header from "../../../components/header";
-import FeaturesSection from "./sections/features-section";
 import HeroSection from "./sections/hero-section";
 import PricingSection from "./sections/pricing-section";
 import ProcessSection from "./sections/process-section";
@@ -14,9 +13,8 @@ export default function StartupMVPPage() {
   return (
     <>
       <Header addPricingLink />
-      <main className="flex flex-col w-full max-w-6xl px-4 py-24 flex-grow mx-auto">
+      <main className="flex flex-col w-full py-24 flex-grow mx-auto">
         <HeroSection />
-        <FeaturesSection />
         <ProcessSection />
         <PricingSection />
       </main>

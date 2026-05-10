@@ -11,7 +11,7 @@ const processSteps = [
   },
   {
     title: "Kickoff",
-    description: "Once the first invoice for half of the total project cost is paid, development officially starts and the project timeline is locked in.",
+    description: "Once the first invoice (half of the total project cost) is paid, development officially starts.",
     icon: Handshake,
   },
   {
@@ -25,12 +25,12 @@ const processSteps = [
     icon: Settings2,
   },
   {
-    title: "Launch and Transfer Ownership",
+    title: "Launch",
     description: "After the final invoice is paid, we get on a call, make the site live, and I walk you through the handoff so you fully understand ownership and next steps.",
     icon: Rocket,
   },
   {
-    title: "Revisions and Maintenance",
+    title: "Revisions",
     description: "If small bugs or minor improvements show up after launch, I fix them at no cost. Larger redesigns or feature additions are charged separately. If you need ongoing maintenance, we can discuss a monthly plan.",
     icon: Wrench,
   },

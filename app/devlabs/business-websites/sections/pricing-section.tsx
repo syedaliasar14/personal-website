@@ -110,12 +110,12 @@ export default function PricingSection() {
           <p className="opacity-80 mt-4 leading-7">
             Need a more custom solution, or want to talk through what features would be best for your business? Reach out and we can discuss something that works for you.
           </p>
-          <div className="mt-5">
+          <div className="mt-5 flex flex-col md:flex-row items-start gap-4">
             <Link href="/contact" className="btn inline-flex items-center gap-2">
               Let's discuss
               <ArrowRight size={16} strokeWidth={1.75} />
             </Link>
-            <Link href="devlabs" className="btn-outline inline-flex items-center gap-2 ml-4">
+            <Link href="devlabs" className="btn-outline inline-flex items-center">
               Other services
             </Link>
           </div>

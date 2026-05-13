@@ -48,7 +48,7 @@ export default function HeroSection() {
               Turn your startup idea into a real product.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-              Need a web app or SaaS product? I build from the ground up, setting up a database, infrastructure, and user accounts. Your MVP will be ready to test with users or show to investors.
+              Need a web app or SaaS product? I build from the ground up, setting up databases, infrastructure, and user accounts so that your MVP will be ready to test with users and show to investors.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

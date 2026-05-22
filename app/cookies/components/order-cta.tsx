@@ -6,6 +6,8 @@ export default function OrderCta() {
   const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState("");
 
+  // TODO: integrate with a backend API or email service (e.g. Mailchimp, Resend)
+  // to persist subscriber emails. Currently UI-only.
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (email.trim()) {

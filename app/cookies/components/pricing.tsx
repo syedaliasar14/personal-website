@@ -79,11 +79,7 @@ export default function Pricing() {
               )}
 
               <div className="flex flex-col gap-1 mb-6">
-                <p
-                  className={`uppercase tracking-[0.3em] text-xs ${
-                    tier.highlight ? "text-zinc-400" : "text-zinc-400"
-                  }`}
-                >
+                <p className="uppercase tracking-[0.3em] text-xs text-zinc-400">
                   {tier.count}
                 </p>
                 <h3

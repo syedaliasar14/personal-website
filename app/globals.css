@@ -144,11 +144,19 @@
   }
 
   .pill-primary {
-    @apply inline-flex rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-green-200;
+    @apply inline-flex rounded-full border border-green-300/40 bg-green-300/10 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-green-200 whitespace-nowrap;
   }
 
   .pill-solid {
-    @apply inline-flex rounded-full border border-green-300/40 bg-green-600/70 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-green-100;
+    @apply inline-flex rounded-full border border-green-300/40 bg-green-600/70 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-green-100 whitespace-nowrap;
+  }
+
+  .pill-secondary {
+    @apply inline-flex rounded-full border border-secondary/40 bg-secondary/20 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-slate-200 whitespace-nowrap;
+  }
+
+  .pill-solid-secondary {
+    @apply inline-flex rounded-full border border-secondary/40 bg-secondary/70 px-4 py-2 text-sm uppercase font-medium tracking-[0.28em] text-slate-100 whitespace-nowrap;
   }
 
   .skill-hover {

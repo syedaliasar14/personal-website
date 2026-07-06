@@ -115,7 +115,7 @@ export default function PricingSection() {
               Let's discuss
               <ArrowRight size={16} strokeWidth={1.75} />
             </Link>
-            <Link href="devlabs" className="btn-outline inline-flex items-center">
+            <Link href="/devlabs" className="btn-outline inline-flex items-center">
               Other services
             </Link>
           </div>
